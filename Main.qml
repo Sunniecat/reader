@@ -12,6 +12,7 @@ ApplicationWindow {
             title: qsTr("File")
             MenuItem { action: actions.open }
             MenuItem { action: actions.quit }
+            MenuItem { action: actions.about}
         }
     }
 
