@@ -16,6 +16,7 @@ qt_add_qml_module(appreader_test
     QML_FILES
         Main.qml
     SOURCES
+    QML_FILES Actions.qml
 )
 
 target_compile_features(appreader_test PRIVATE cxx_std_20)

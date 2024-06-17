@@ -10,31 +10,20 @@ ApplicationWindow {
     menuBar: MenuBar {
         Menu {
             title: qsTr("File")
-            MenuItem { action:open }
-            MenuItem { action:quit }
+            MenuItem { action: actions.open }
+            MenuItem { action: actions.quit }
         }
     }
 
     header: ToolBar {
         RowLayout{
-            ToolButton{ action: open }
-            ToolButton{ action: quit }
+            ToolButton{ action: actions.open }
+            ToolButton{ action: actions.quit }
         }
     }
 
-    Action {
-        id: open
-        text: qsTr("&Open...")
-        icon.name: "document-open"
-        shortcut: "StandardKey.Open"
-        onTriggered: console.log("Open action triggered");
-    }
-
-    Action {
-        id: quit
-        text: qsTr("&Quit")
-        icon.name: "application-exit"
-        onTriggered: Qt.quit();
+    Actions {
+        id: actions
     }
 
     //Content Area
